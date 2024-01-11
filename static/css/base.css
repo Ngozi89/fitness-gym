@@ -10,7 +10,7 @@ body {
     font-family: 'Lato';
 }
 
-/* from Bulma for font awesome icon */
+/* from Bulma */
 .icon {
     align-items: center;
     display: inline-flex;
@@ -27,11 +27,20 @@ body {
     width: fit-content;
 }
 
+.shop-now-button {
+    background: black;
+    color: white;
+    min-width: 260px;
+}
+
 .btn-black {
     background: black;
     color: white;
 }
 
+.shop-now-button:hover,
+.shop-now-button:active,
+.shop-now-button:focus,
 .btn-black:hover,
 .btn-black:active,
 .btn-black:focus {
@@ -48,12 +57,7 @@ body {
 }
 
 .bg-black {
-    background: orangered;
-}
-
-.sub-btn {
-    color: #ff0000;
-    font-weight: 600;
+    background: #000 !important;
 }
 
 .overlay {
@@ -70,9 +74,9 @@ body {
 
 /* Slightly larger container on xl screens */
 @media (min-width: 1200px) {
-    .container {
-        max-width: 80%;
-    }
+  .container {
+    max-width: 80%;
+  }
 }
 
 /* fixed top navbar only on medium and up */
@@ -87,5 +91,16 @@ body {
 
     .header-container {
         padding-top: 164px;
+    }
+}
+
+/* pad the top a bit when navbar is collapsed on mobile */
+@media (max-width: 991px) {
+    .header-container {
+        padding-top: 116px;
+    }
+
+    body {
+        height: calc(100vh - 116px);
     }
 }

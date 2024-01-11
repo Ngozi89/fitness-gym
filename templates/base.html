@@ -33,18 +33,18 @@
     {% block extra_js %}
     {% endblock %}
 <!-- Title -->
-    <title>Fitness Gym {% block extra_title %}{% endblock %}</title>
+    <title>Befit {% block extra_title %}{% endblock %}</title>
   </head>
   <body>
-    <!-- Home url Fitness Gym -->
+<!-- Home url -->
     <header class="container-fluid fixed-top">
         <div id="topnav" class="row bg-white pt-lg-2 d-none d-lg-flex">
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0 text-center text-lg-left">
                 <a href="{% url 'home' %}" class="nav-link main-logo-link">
-                    <h2 class="logo-font text-black my-0"><strong>Fitness</strong> Gym</h2>
+                    <h2 class="logo-font text-black my-0"><strong>Befit</strong></h2>
                 </a>
             </div>
-<!-- Search engine -->             
+<!-- Search Egine -->            
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <form method="GET" action="">
                     <div class="input-group w-100">
@@ -59,9 +59,8 @@
                     </div>
                 </form>
             </div>
-<!-- End Search engin-->
-
-<!-- My account -->            
+<!-- End Search --> 
+<!-- User account -->           
             <div class="col-12 col-lg-4 my-auto py-1 py-lg-0">
                 <ul class="list-inline list-unstyled text-center text-lg-right my-0">
                     <li class="list-inline-item dropdown">
@@ -82,12 +81,29 @@
                                 <a href="{% url 'account_signup' %}" class="dropdown-item">Register</a>
                                 <a href="{% url 'account_login' %}" class="dropdown-item">Login</a>
                             {% endif %}
-                        </div>
+                        </div>                       
                     </li>
+<!-- End User account -->
+
+<!-- Shopping bag -->
+                    <li class="list-inline-item">
+                        <a class="{% if grand_total %}text-info font-weight-bold{% else %}text-black{% endif %} nav-link" href="">
+                            <div class="text-center">
+                                <div><i class="fas fa-shopping-bag fa-lg"></i></div>
+                                <p class="my-0">
+                                    {% if grand_total %}
+                                        ${{ grand_total|floatformat:2 }}
+                                    {% else %}
+                                        $0.00
+                                    {% endif %}
+                                </p>
+                            </div>
+                        </a>
+                    </li>
+<!-- End shopping bag -->                    
                 </ul>
             </div>
         </div>
-<!-- End my account-->       
         <div class="row bg-white">
             <nav class="navbar navbar-expand-lg navbar-light w-100">
                 <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#main-nav" aria-controls="main-nav" aria-expanded="false" aria-label="Toggle navigation">
@@ -97,10 +113,9 @@
                 {% include 'includes/main-nav.html' %}
             </nav>
         </div>
-
-        <div class="row text-center">
+        <div id="delivery-banner" class="row text-center">
             <div class="col bg-black text-white">
-                <h4 class="logo-font my-1">Train from  $10 a month!</h4>                
+                <h4 class="logo-font my-1">Free delivery on orders over ${{ free_shipping_threshold }}!</h4>                
             </div>            
         </div>
     </header>
@@ -117,7 +132,6 @@
 
     {% block postloadjs %}
     {% endblock %}
-
     
   </body>
 </html>
