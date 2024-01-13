@@ -26,7 +26,7 @@ SECRET_KEY = 'django-insecure-j2$*0%fd98r4xd74@8-s*iem0!sbw!s@i7f%=j**urslqt_xl&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ngozi89-fitnessgym-b8s9nqnfbou.ws-eu107.gitpod.io']
+ALLOWED_HOSTS = ['8000-ngozi89-fitnessgym-hlx1r1vqmbj.ws-eu107.gitpod.io']
 
 
 # Application definition
@@ -201,8 +201,12 @@ STATICFILES_DIRS = (os.path.join(BASE_DIR, 'static'),)
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
 
+# Stripe
 FREE_DELIVERY_THRESHOLD = 99
 STANDARD_DELIVERY_PERCENTAGE = 10
+STRIPE_CURRENCY = 'usd'
+STRIPE_PUBLIC_KEY = os.getenv('STRIPE_PUBLIC_KEY', '')
+STRIPE_SECRET_KEY = os.getenv('STRIPE_SECRET_KEY', '')
 
 # Default primary key field type
 # https://docs.djangoproject.com/en/3.2/ref/settings/#default-auto-field
