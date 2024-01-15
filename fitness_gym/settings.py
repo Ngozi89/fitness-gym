@@ -27,7 +27,7 @@ SECRET_KEY = 'django-insecure-j2$*0%fd98r4xd74@8-s*iem0!sbw!s@i7f%=j**urslqt_xl&
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['8000-ngozi89-fitnessgym-zb4o32hkzz2.ws-eu107.gitpod.io', 'fitness-befit.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['8000-ngozi89-fitnessgym-zb4o32hkzz2.ws-eu107.gitpod.io', 'fitness-befit-198eac9fe306.herokuapp.com', 'localhost']
 
 
 # Application definition
