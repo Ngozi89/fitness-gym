@@ -27,7 +27,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '')
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = 'DEVELOPMENT' in os.environ
 
-ALLOWED_HOSTS = ['8000-ngozi89-fitnessgym-zb4o32hkzz2.ws-eu107.gitpod.io', 'fitness-befit-198eac9fe306.herokuapp.com', 'localhost']
+ALLOWED_HOSTS = ['fitness-befit-198eac9fe306.herokuapp.com', 'localhost']
 
 
 # Application definition
