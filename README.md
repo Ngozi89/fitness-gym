@@ -1,7 +1,7 @@
 # Befit Website (Milestone Project 5)
 ![mockup](readme/site-responsive.png)
 
-[Befit](https:/.herokuapp.com/) is an e-commerce retailer for fashion, home and accessories. At Befit you will find brands for the modern woman and her family knowing that customer is the focus.
+[Befit](https://fitness-befit-198eac9fe306.herokuapp.com/) is an e-commerce retailer for fashion, home and accessories. At Befit you will find brands for the modern woman and her family knowing that customer is the focus.
 
 ## Table of contents
 
